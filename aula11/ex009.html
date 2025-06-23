@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades.Net</title>
+</head>
+<body>
+    <h1>Insira seu pais Natal</h1>
+    <input type="text" id="txtnac" name="txtnac">
+    <input type="button" value="Enviar" onclick="vernac()">
+    <div id="res"></div>
+
+    <script>
+        function vernac(){
+        var nac = window.document.getElementById('txtnac');
+        var res = window.document.getElementById('res');
+        var vnac = nac.value;
+
+        res.innerHTML = `Seu país de origem é ${vnac}`;
+
+        if(vnac === 'Brasil') {
+            res.innerHTML += "<p>Você é Brasileiro</p>";
+        }else{
+            res.innerHTML += "<p>Você é Estrangeiro</p>";
+        }
+        }
+    </script>
+</body>
+</html>
